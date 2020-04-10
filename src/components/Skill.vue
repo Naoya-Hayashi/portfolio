@@ -10,7 +10,7 @@
       <p>GitHub</p>
     </div>
     <div class="gitHubLink">
-      <a href="https://github.com/Naoya-Hayashi/portfolio">GitHub</a>
+      GitHub : <a href="https://github.com/Naoya-Hayashi/portfolio">https://github.com/Naoya-Hayashi/portfolio</a>
     </div>
     <div clas="skillCategorie">
       <a />
@@ -54,4 +54,27 @@
     font-size: 12px;
   }
 
+  .gitHubLink {
+    color: #20879f;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+  }
+
+  .skillCategorie {
+    color: #b51a1a;
+    color: #0f8839;
+    color: #571083;
+  }
+
+  .skillLis {
+    color: #b51a1a;
+    background: #0f8839;
+    display: inline-block;
+    height: 30px;
+  }
+
+  .skillGraph {
+    color: #0f8839;
+    background: #571083;
+  }
 </style>

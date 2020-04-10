@@ -21,10 +21,11 @@
 </script>
 
 <style scope>
-#drawerSection {
-  width: 100%;
-  display: block;
-  background: linear-gradient(to bottom, #80e1f7, #06c1e6);
-}
+  #drawerSection {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #f3f3f3;
+  }
 
 </style>

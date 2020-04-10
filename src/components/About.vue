@@ -31,7 +31,6 @@
   .aboutExplain {
     color: #707070;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: bold;
     font-size: 12px;
     letter-spacing: 0.25em;
   }

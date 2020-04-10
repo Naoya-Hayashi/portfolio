@@ -6,7 +6,12 @@
     <div class="companyName">
       <p>Seattleconsulting</p>
     </div>
-    <img src="IMG_9975.jpg">
+
+    <img
+      class="profilePicture"
+      src="../assets/IMG_9975.png"
+      alt="プロフィール写真"
+    >
   </div>
 </template>
 
@@ -36,4 +41,9 @@
     text-shadow: 2px 2px #808080;
   }
 
+  .profilePicture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
 </style>

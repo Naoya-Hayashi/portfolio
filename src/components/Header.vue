@@ -1,29 +1,30 @@
 <template>
   <div id="headerSection">
-    <div id="headerButton">
-      <button @click="toggle">
-        <img assets="_i_icon_12585_icon_125850_256.png">
-      </button>
-      <Drawer
-        align="left"
-        :closeable="true"
-        @close="toggle"
-      >
-        <div v-if="open">
-          menu
-        </div>
-      </Drawer>
-    </div>
+    <img
+      class="headerButton"
+      src="../assets/_i_icon_12585_icon_125850_256.png"
+    >
+    <td align="left" />
+    <Drawer
+      align="left"
+      :closeable="true"
+      @close="toggle"
+    >
+      <div v-if="open">
+        <Menu />
+      </div>
+    </Drawer>
   </div>
 </template>
 
 <script>
 import Drawer from "vue-simple-drawer";
- 
+
 export default {
   name: "App",
   components: {
-    Drawer
+    Drawer,
+
   },
   data() {
     return {
@@ -43,11 +44,16 @@ export default {
   "~bootstrap/scss/buttons";
 </style>
 <style scope>
-#headerSection {
-  background-color: #f3f3f3;
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  #headerSection {
+    background-color: #f3f3f3;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .headerButton {
+    width: 30px;
+    height: auto;
+  }
 
 </style>
