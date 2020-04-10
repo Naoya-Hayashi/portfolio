@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-   <Header />
-   <Main />
-   <About />
-   <Skill />
-   <Vision />
-   <Footer />
-   <Menu />
+    <Header />
+    <Main />
+    <About />
+    <Skill />
+    <Vision />
+    <Footer />
   </div>
 </template>
 
@@ -17,7 +16,7 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
-import Menu from './components/Menu.vue'
+
 
 export default {
   name: 'App',
@@ -28,18 +27,19 @@ export default {
     Skill,
     Vision,
     Footer,
-    Menu,
+
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
 }
 </style>
