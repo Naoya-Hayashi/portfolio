@@ -1,10 +1,13 @@
 <template>
   <div id="aboutSection">
     <div class="aboutTitle">
-      <p>アバウトのタイトル</p>
+      <p>About Me</p>
     </div>
     <div class="aboutExplain">
-      <p>bnvpkabvpkanvpikasnnobpbioug</p>
+      <p>
+        神奈川生まれの神奈川育ち。大学ではメディア学を学ぶ。学生時代はスポーツに勤しみ、
+        中学では硬式テニス、高校では器械体操、大学では社交ダンスをやってきた。
+      </p>
     </div>
   </div>
 </template>
