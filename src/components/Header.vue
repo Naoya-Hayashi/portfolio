@@ -3,8 +3,8 @@
     <img
       class="headerButton"
       src="../assets/_i_icon_12585_icon_125850_256.png"
+      @click="toggle"
     >
-    <td align="left" />
     <Drawer
       align="left"
       :closeable="true"
@@ -47,13 +47,15 @@ export default {
   #headerSection {
     background-color: #f3f3f3;
     width: 100%;
-    height: auto;
+    height: 40px;
     display: block;
   }
 
   .headerButton {
     width: 30px;
     height: auto;
+    float: left;
+    margin: 5px;
   }
 
 </style>

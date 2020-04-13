@@ -21,6 +21,7 @@
 <style scope>
   #mainSection {
     width: 100%;
+    height: 250px;
     display: block;
     background: linear-gradient(to bottom, #80e1f7, #06c1e6);
   }
