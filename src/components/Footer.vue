@@ -1,18 +1,15 @@
 <template>
   <div id="footerSection">
     <a
-      v-scroll-to="'.footerScrol'"
       href="#"
       @click="clickSmoothScroll()"
     >
       <img
-        class="footerScrol"
+        class="footerScroll"
         src="../assets/i_icon_12256_icon_122560_256.png"
+        alt="スクロールボタン"
       >
     </a>
-    <div
-      id="hoge"
-    />
     <div class="footerCopyright">
       <p>©︎Seattleconsulting</p>
     </div>
@@ -22,7 +19,6 @@
 <script>
 import Vue from "vue";
 import VueScrollTo from "vue-scrollto";
-
 Vue.use(VueScrollTo)
 
 export default {
@@ -30,9 +26,9 @@ export default {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#hoge'),
+        document.querySelector("#hoge"),
         400,
-
+        null,
         null,
         'y'
       )
@@ -40,7 +36,7 @@ export default {
   }
 }
 Vue.use(VueScrollTo, {
-  container: "hoge",// スクロールするcontainer
+  container: "body",// スクロールするcontainer
   duration: 500, // スクロールアニメーションの長さ（ミリ秒）
   easing: "ease", // 使用されるイージング
   force: true,   // スクロールターゲットがすでに表示されている場合でも、スクロールを実行するかどうか。
@@ -64,14 +60,10 @@ Vue.use(VueScrollTo, {
     text-shadow: 1px 1px #808080;
   }
 
-  .footerScrol {
+  .footerScroll {
     width: 20px;
     height: auto;
     position: relative;
     top: -12px;
   }
 </style>
-
-function newFunction() {
-  return null;
-}

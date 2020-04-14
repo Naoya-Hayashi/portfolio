@@ -1,28 +1,59 @@
 <template>
   <div id="skillSection">
     <div class="skillTitle">
-      <p>習得スキル</p>
+      <p>Skill Set</p>
     </div>
     <div class="skillExplain">
-      <p>スキルの説明</p>
+      <p>ascnionsaicnionspo nin ind ioan inspincpopcm oncaipdn ubv osncnopdnip nin ipsncpojscn ips</p>
     </div>
     <div class="gitHubLabe">
-      <p>GitHub</p>
+      <p />
     </div>
     <div class="gitHubLink">
       GitHub : <a href="https://github.com/Naoya-Hayashi/portfolio">https://github.com/Naoya-Hayashi/portfolio</a>
     </div>
-    <div clas="skillCategorie">
-      <a />
+    <div id="skillCategorie">
+      <a id="Front-end">Front-end</a>
+      <a id="Back-end">Back-end</a>
+      <a id="DevOps">DevOps</a>
     </div>
-    <div class="skillLis">
-      <p>私のスキルはこれだけあります。</p>
+    <div id="skillList">
+      <ul class="front-end">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>SCSS</li>
+        <li>Vue</li>
+      </ul>
+      <ul class="back-end">
+        <li>Java</li>
+        <li>Ruby</li>
+        <li>RubyOnRails</li>
+        <li>MySQL</li>
+      </ul>
+      <ul class="devops">
+        <li>Linux</li>
+        <li>Node</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Firebase</li>
+      </ul>
     </div>
-    <div class="skillGrap" />
+    <hr width="250">
+    <div class="skillGraph">
+      <Chart />
+    </div>
   </div>
 </template>
 
 <script>
+import Chart from './Chart.vue'
+export default {
+  name: 'App',
+  components: {
+    Chart
+  }
+}
 </script>
 
 <style scope>
@@ -60,21 +91,52 @@
     font-size: 12px;
   }
 
-  .skillCategorie {
-    color: #b51a1a;
-    color: #0f8839;
-    color: #571083;
+  #skillCategorie {
+    margin: 10px;
   }
 
-  .skillLis {
+  #Front-end {
     color: #b51a1a;
-    background: #0f8839;
+    margin: 10px;
+  }
+
+  #Back-end {
+    color: #0f8839;
+    margin: 10px;
+  }
+
+  #Debops {
+    color: #571083;
+    margin: 10px;
+  }
+
+  li {
+    font-family: 'Noto Sans JP', sans-serif;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    background: #f3f3f3;
     display: inline-block;
-    height: 30px;
+    box-shadow: 0 3px #f0f0f0;
+  }
+
+  .front-end {
+    color: #b51a1a;
+  }
+
+  .back-end {
+    color: #0f8839;
+  }
+
+  .devops {
+    color: #571083;
   }
 
   .skillGraph {
     color: #0f8839;
-    background: #571083;
+    background: #fff;
+    width: 50%;
+    margin: 0 auto;
   }
 </style>

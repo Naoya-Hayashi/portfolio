@@ -1,5 +1,8 @@
 <template>
   <div id="headerSection">
+    <div
+      id="hoge"
+    />
     <img
       class="headerButton"
       src="../assets/_i_icon_12585_icon_125850_256.png"
@@ -19,12 +22,12 @@
 
 <script>
 import Drawer from "vue-simple-drawer";
-
+import Menu from './Menu.vue'
 export default {
   name: "App",
   components: {
     Drawer,
-
+    Menu
   },
   data() {
     return {

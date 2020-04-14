@@ -1,10 +1,10 @@
 <template>
   <div id="visionSection">
     <div class="visionTitle">
-      <p>ビジョンのタイトル</p>
+      <p>Vision</p>
     </div>
     <div class="visionExplain">
-      <p>asdasfanpnvonsopvnopan iopsanvpbsipv npsdn [oasnvoans ponaspcno[saninkp bkp p pcpwkcopasm[o]</p>
+      <p>asdasfanpnvonsopvnopan iopsanvpbsipv npsdn [oasnvoankhsfoasfhpas;lhaspojhvnoahsipoifoubpvsaopgopodvgfhscahpjofhiogaspfisahcosivhhapiahi0ns ponaspcno[saninkp bkp p pcpwkcopasm[o]</p>
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@
     width: 100%;
     height: auto;
     display: block;
-    background: linear-gradient(#f5f5f5);
+    background: linear-gradient(to bottom, #fff, #f3f3f3);
   }
 
   .visionTitle {
