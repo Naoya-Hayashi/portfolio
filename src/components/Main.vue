@@ -32,6 +32,7 @@
     font-weight: bold;
     font-size: 18px;
     text-shadow: 2px 2px #808080;
+    text-align: center;
   }
 
   .companyName {

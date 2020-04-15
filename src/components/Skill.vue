@@ -1,37 +1,70 @@
 <template>
   <div id="skillSection">
-    <div class="skillTitle">
+    <div id="skillTitle">
       <p>Skill Set</p>
     </div>
     <div class="skillExplain">
       <p>ascnionsaicnionspo nin ind ioan inspincpopcm oncaipdn ubv osncnopdnip nin ipsncpojscn ips</p>
     </div>
-    <div class="gitHubLabe">
-      <p />
-    </div>
-    <div class="gitHubLink">
-      GitHub : <a href="https://github.com/Naoya-Hayashi/portfolio">https://github.com/Naoya-Hayashi/portfolio</a>
-    </div>
+    <lavel id="gitHubLabel">
+      GitHub:
+      <a
+        id="gitHubLink"
+        href="https://github.com/Naoya-Hayashi/portfolio"
+      >https://github.com/Naoya-Hayashi/portfolio</a>
+    </lavel>
     <div id="skillCategorie">
-      <a id="Front-end">Front-end</a>
-      <a id="Back-end">Back-end</a>
-      <a id="DevOps">DevOps</a>
+      <ul>
+        <li>
+          <span
+            id="Front-end"
+            @click="setCurrentChart('front')"
+          >
+            Front-end
+          </span>
+        </li>
+        <li>
+          <span
+            id="Back-end"
+            @click="setCurrentChart('back')"
+          >
+            Back-end
+          </span>
+        </li>
+        <li>
+          <span
+            id="Devops"
+            @click="setCurrentChart('dev')"
+          >
+            DevOps
+          </span>
+        </li>
+      </ul>
     </div>
     <div id="skillList">
-      <ul class="front-end">
+      <ul
+        id="front-end"
+        :class="{'front-change': isFrontActive}"
+      >
         <li>HTML</li>
         <li>CSS</li>
         <li>Javascript</li>
         <li>SCSS</li>
         <li>Vue</li>
       </ul>
-      <ul class="back-end">
+      <ul
+        id="back-end"
+        :class="{'back-change': isBackActive}"
+      >
         <li>Java</li>
         <li>Ruby</li>
         <li>RubyOnRails</li>
         <li>MySQL</li>
       </ul>
-      <ul class="devops">
+      <ul
+        id="devops"
+        :class="{'dev-change': isDevOpsActive}"
+      >
         <li>Linux</li>
         <li>Node</li>
         <li>Git</li>
@@ -39,19 +72,56 @@
         <li>Firebase</li>
       </ul>
     </div>
-    <hr width="250">
-    <div class="skillGraph">
-      <Chart />
+    <div id="skillGraph">
+      <div
+        v-if="isFrontActive"
+      >
+        <FrontChart />
+      </div>
+      <div
+        v-if="isBackActive"
+      >
+        <BackChart />
+      </div>
+      <div
+        v-if="isDevOpsActive"
+      >
+        <DevChart />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Chart from './Chart.vue'
+import FrontChart from '../components/FrontChart.vue';
+import BackChart from '../components/BackChart.vue';
+import DevChart from '../components/DevChart.vue';
 export default {
-  name: 'App',
   components: {
-    Chart
+    FrontChart,
+    BackChart,
+    DevChart
+  },
+  data(){
+    return {
+      currentChart: 'front',
+    }
+  },
+   computed: {
+     isFrontActive() {
+       return this.currentChart=='front';
+     },
+     isBackActive() {
+       return this.currentChart=='back';
+     },
+     isDevOpsActive() {
+      return this.currentChart=='dev';
+   }
+  },
+  methods: {
+    setCurrentChart(chart){
+      this.currentChart = chart;
+    },
   }
 }
 </script>
@@ -63,7 +133,7 @@ export default {
     background: #fff;
   }
 
-  .skillTitle {
+  #skillTitle {
     color: #20879f;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
@@ -79,16 +149,12 @@ export default {
     letter-spacing: 0.25em;
   }
 
-  .gitHubLabe {
+  #gitHubLabel,
+  #gitHubLink {
+    font-size: 12pt;
     color: #20879f;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 12px;
-  }
-
-  .gitHubLink {
-    color: #20879f;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 12px;
+    font-family: "Noto Sans Japanese", sans-serif;
+    font-weight: bold;
   }
 
   #skillCategorie {
@@ -98,22 +164,24 @@ export default {
   #Front-end {
     color: #b51a1a;
     margin: 10px;
+    cursor: pointer;
   }
 
   #Back-end {
     color: #0f8839;
     margin: 10px;
+    cursor: pointer;
   }
 
-  #Debops {
+  #Devops {
     color: #571083;
     margin: 10px;
+    cursor: pointer;
   }
 
   li {
     font-family: 'Noto Sans JP', sans-serif;
     list-style: none;
-    padding: 10px;
     margin: 10px;
     font-weight: bold;
     background: #f3f3f3;
@@ -121,19 +189,60 @@ export default {
     box-shadow: 0 3px #f0f0f0;
   }
 
-  .front-end {
+  #front-end {
     color: #b51a1a;
   }
 
-  .back-end {
+  #back-end {
     color: #0f8839;
   }
 
-  .devops {
+  #devops {
     color: #571083;
   }
 
-  .skillGraph {
+  #skillList {
+    font-size: 18px;
+    width: auto;
+  }
+
+  .front-change li {
+    background-color: rgba(181, 26, 26, 0.25);
+  }
+
+  .back-change li {
+    background-color: rgba(15, 136, 57, 0.25);
+  }
+
+  .dev-change li {
+    background-color: rgba(87, 16, 131, 0.25);
+  }
+
+  #front-end li {
+    color: rgba(181, 26, 26, 0.75);
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 20px 2px 20px;
+    box-shadow: 0 0 8px gray;
+  }
+
+  #back-end li {
+    color: rgba(15, 136, 57, 0.75);
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 20px 2px 20px;
+    box-shadow: 0 0 8px gray;
+  }
+
+  #devops li {
+    color: rgba(87, 16, 131, 0.75);
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 20px 2px 20px;
+    box-shadow: 0 0 8px gray;
+  }
+
+  #skillGraph {
     color: #0f8839;
     background: #fff;
     width: 50%;

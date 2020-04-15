@@ -1,100 +1,112 @@
 <template>
   <div id="drawerSection">
     <div class="drawerButton">
-      <img src="">
+      <lavel
+        id="labelBatsu"
+        for="nav-input"
+      >
+        <img
+          class="closeButton"
+          src="../assets/_i_icon_11911_icon_119110_256.png"
+          alt="閉じる"
+        >
+      </lavel>
     </div>
-    <ul class="menuButton">
-      <!--  <button @click="toggle">他のやつをボタンにしたいボタン</button>-->
-      <li>
+    <ul id="menuSection">
+      <li id="menuItems">
         <a
-          class="Home"
-          href="#mainSection"
+          id="drawerMenuItemLink"
+          href="#app"
           @click="clickSmoothScroll()"
         >Home</a>
       </li>
-      <li>
+      <li id="menuItems">
         <a
-          class="Aboutme"
+          id="drawerMenuItemLink"
           href="#aboutSection"
           @click="clickSmoothScroll()"
         >About Me</a>
       </li>
-      <li>
+      <li id="menuItems">
         <a
-          class="SkillSets"
+          id="drawerMenuItemLink"
           href="#skillSection"
-          @click="toggle"
+          @click="clickSmoothScroll()"
         >Skill Sets</a>
       </li>
-      <li>
+      <li id="menuItems">
         <a
-          class="Vision"
+          id="drawerMenuItemLink"
           href="#visionSection"
           @click="clickSmoothScroll()"
         >Vision</a>
       </li>
-      <li>
+      <li id="menuItems">
         <a
-          class="Customize1"
+          id="drawerMenuItemLink"
           href="#workSection"
           @click="clickSmoothScroll()"
         >Customize Item1</a>
       </li>
-      <li>
+      <li id="menuItems">
         <a
-          class="Customize2"
-          href="#customizeSection"
+          id="drawerMenuItemLink"
+          href="#costomizeSection"
           @click="clickSmoothScroll()"
         >Customize Item2</a>
       </li>
     </ul>
-    <div class="drawerMenuItemLink">
-      <a helf="" />
-    </div>
   </div>
 </template>
-<!--<template>
-  <div id="app">
-    <button @click="toggle" class="btn btn-success">toggle</button>
-    <Drawer @close="toggle" align="left" :closeable="true">
-      <div v-if="open">content here</div>
-    </Drawer>
-  </div>
-</template>-->
+
 
 <script>
-
+export default {
+}
 </script>
+
 
 <style scope>
   #drawerSection {
-    width: 100%;
     height: auto;
     display: block;
-    background: #f3f3f3;
+    background: #fff;
   }
 
-  .Home {
+  #drawerButton {
+    background-color: #f3f3f3;
+    margin: 5px;
+  }
+
+  #menuSection #menuItems {
+    background-color: #fff;
+    width: 100%;
+    height: 0 auto;
+    height: 50px;
+    border-bottom: 0.1px solid #000;
+  }
+
+  #drawerMenuItemLink {
+    padding: 10px;
+    color: #000;
+    font-family: "Noto Sans Japanese", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+  }
+
+  li {
     display: block;
   }
 
-  .Aboutme {
-    display: block;
-  }
-
-  .SkillSets {
-    display: block;
-  }
-
-  .Vision {
-    display: block;
-  }
-
-  .Customize1 {
-    display: block;
-  }
-
-  .Customize2 {
-    display: block;
+  .closeButton {
+    width: 20px;
+    height: auto;
+    float: right;
+    margin: 10px;
   }
 </style>
