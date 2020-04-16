@@ -19,33 +19,42 @@
 </script>
 
 <style scope>
-  #mainSection {
-    width: 100%;
-    height: 250px;
-    display: block;
-    background: linear-gradient(to bottom, #80e1f7, #06c1e6);
-  }
+#mainSection {
+  width: 100%;
+  height: 250px;
+  display: block;
+  background: linear-gradient(to bottom, #80e1f7, #06c1e6);
+}
 
-  .userName {
-    color: #fff;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    text-shadow: 2px 2px #808080;
-    text-align: center;
-  }
+.userName {
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 2px 2px #808080;
+  text-align: center;
+  border-bottom: 1px solid white;
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
 
-  .companyName {
-    color: #fff;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    text-shadow: 2px 2px #808080;
-  }
+.companyName {
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 2px 2px #808080;
+  padding: 20px;
+}
 
-  .profilePicture {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-  }
+.profilePicture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+* {
+  margin: 0;
+}
 </style>

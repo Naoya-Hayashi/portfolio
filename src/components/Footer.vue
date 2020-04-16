@@ -27,9 +27,7 @@ export default {
       event.preventDefault()
       this.$SmoothScroll(
         document.querySelector("#hoge"),
-        400,
-        null,
-        null,
+        1000,
         'y'
       )
     }
@@ -61,9 +59,9 @@ Vue.use(VueScrollTo, {
   }
 
   .footerScroll {
-    width: 20px;
+    width: 35px;
     height: auto;
     position: relative;
-    top: -12px;
+    top: -15px;
   }
 </style>

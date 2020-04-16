@@ -1,10 +1,10 @@
 <template>
-  <div id="costomizeSection">
+  <div id="customizeSection">
     <div class="ccc">
-      <p>Costamize</p>
+      <p>Custamize</p>
     </div>
     <div class="ddd">
-      <p>Seattleconsulting</p>
+      <p>(nothing)</p>
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@
 </script>
 
 <style scope>
-  #costomizeSection {
+  #customizeSection {
     width: 100%;
     height: 250px;
     display: block;
