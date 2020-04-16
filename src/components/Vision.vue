@@ -4,7 +4,8 @@
       <p>Vision</p>
     </div>
     <div class="visionExplain">
-      <p>asdasfanpnvonsopvnopan iopsanvpbsipv npsdn [oasnvoankhsfoasfhpas;lhaspojhvnoahsipoifoubpvsaopgopodvgfhscahpjofhiogaspfisahcosivhhapiahi0ns ponaspcno[saninkp bkp p pcpwkcopasm[o]</p>
+      <p>asdasfanpnvonsopvnopan iopsanvpbsipv npsdn [oasnvoankhsfoasfhpas;lhaspojhvnoahsipoif</p>
+      <p>oubpvsaopgopodvgfhscahpjofhiogaspfisahcosivhhapiahi0ns ponaspcno[saninkp bkp p pcpwkcopasm[o]</p>
     </div>
   </div>
 </template>
