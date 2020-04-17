@@ -5,6 +5,8 @@
     <About />
     <Skill />
     <Vision />
+    <Work />
+    <Customize />
     <Footer />
   </div>
 </template>
@@ -16,6 +18,10 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
+import Work from './components/Work.vue'
+import Customize from './components/Customize.vue'
+
+
 
 
 export default {
@@ -27,6 +33,8 @@ export default {
     Skill,
     Vision,
     Footer,
+    Work,
+    Customize
 
   }
 }
@@ -41,5 +49,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  width: 100%;
 }
+
 </style>
