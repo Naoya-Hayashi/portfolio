@@ -13,19 +13,14 @@ export default {
             label: 'Back-end Skill Level',
             data: [3, 2, 2, 1],
             backgroundColor: [
-              'rgba(148, 248, 150, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)'
-
-
+              'rgba(148, 248, 150, 0.2)'
             ],
             borderColor: [
               'rgba(10, 183, 13, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)'
+              'rgba(10, 183, 13, 1)',
+              'rgba(10, 183, 13, 1)',
+              'rgba(10, 183, 13, 1)',
+              'rgba(10, 183, 13, 1)',
             ],
             borderWidth: 1
           },
@@ -36,7 +31,8 @@ export default {
           ticks:{
             beginAtZero:true,
             max:5,
-            min:0
+            min:0,
+            stepSize:1
           }
         }
       }

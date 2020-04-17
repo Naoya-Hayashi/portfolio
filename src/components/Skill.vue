@@ -138,14 +138,17 @@ export default {
     height: auto;
     display: block;
     background: #fff;
+    border-bottom: 1px solid gray;
+    margin: 0 auto;
+    padding-bottom: 10px;
   }
 
   #skillTitle {
     color: #20879f;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
-    font-size: 18px;
-    text-shadow: 1px 1px #808080;
+    font-size: 30px;
+    text-shadow: 2px 2px #808080;
     width: 300px;
     margin: 0 auto;
   }
@@ -153,10 +156,10 @@ export default {
   .skillExplain {
     color: #707070;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 0.25em;
-    word-break: keep-all;
+    width: 70%;
+    word-break: normal;
     margin: 0 auto;
   }
 
