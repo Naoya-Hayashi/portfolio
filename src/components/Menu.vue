@@ -1,7 +1,7 @@
 <template>
   <div id="drawerSection">
     <div class="drawerButton">
-      <lavel
+      <label
         id="labelBatsu"
         for="nav-input"
       >
@@ -10,49 +10,49 @@
           src="../assets/_i_icon_11911_icon_119110_256.png"
           alt="閉じる"
         >
-      </lavel>
+      </label>
     </div>
     <ul id="menuSection">
       <li id="menuItems">
         <a
           id="drawerMenuItemLink"
           href="#app"
-          @click="clickSmoothScroll()"
+          @click="closeMenu"
         >Home</a>
       </li>
       <li id="menuItems">
         <a
           id="drawerMenuItemLink"
           href="#aboutSection"
-          @click="clickSmoothScroll()"
+          @click="closeMenu"
         >About Me</a>
       </li>
       <li id="menuItems">
         <a
           id="drawerMenuItemLink"
           href="#skillSection"
-          @click="clickSmoothScroll()"
+          @click="closeMenu"
         >Skill Sets</a>
       </li>
       <li id="menuItems">
         <a
           id="drawerMenuItemLink"
           href="#visionSection"
-          @click="clickSmoothScroll()"
+          @click="closeMenu"
         >Vision</a>
       </li>
       <li id="menuItems">
         <a
           id="drawerMenuItemLink"
           href="#workSection"
-          @click="clickSmoothScroll()"
+          @click="closeMenu"
         >Customize Item1</a>
       </li>
       <li id="menuItems">
         <a
           id="drawerMenuItemLink"
           href="#costomizeSection"
-          @click="clickSmoothScroll()"
+          @click="closeMenu"
         >Customize Item2</a>
       </li>
     </ul>
@@ -62,6 +62,11 @@
 
 <script>
 export default {
+  methods:{
+    closeMenu(){
+      this.$emit('sample')
+    }
+  }
 }
 </script>
 

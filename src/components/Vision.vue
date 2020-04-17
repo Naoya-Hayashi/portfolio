@@ -4,8 +4,11 @@
       <p>Vision</p>
     </div>
     <div class="visionExplain">
-      <p>asdasfanpnvonsopvnopan iopsanvpbsipv npsdn [oasnvoankhsfoasfhpas;lhaspojhvnoahsipoif</p>
-      <p>oubpvsaopgopodvgfhscahpjofhiogaspfisahcosivhhapiahi0ns ponaspcno[saninkp bkp p pcpwkcopasm[o]</p>
+      <p>
+        現在、プログラマーとして目指すのはAI開発です。しかし、ITに関わる人達のお話によると、いきなりのAI開発は難しいのでWeb開発のスキルを身につける事が先決だとのことでした。
+        なので、まずはWeb開発に力を入れていきたいと考えています。
+        スキルとしては、プログラムの関連を読み取れるようオールラウンドに対応できるよう力を付けたいと思います。
+      </p>
     </div>
   </div>
 </template>
@@ -19,6 +22,7 @@
     height: auto;
     display: block;
     background: linear-gradient(to bottom, #fff, #f3f3f3);
+    padding-bottom: 30px;
   }
 
   .visionTitle {
@@ -34,5 +38,7 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12px;
     letter-spacing: 0.25em;
+    word-break: keep-all;
+    margin: 0 auto;
   }
 </style>

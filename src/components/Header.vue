@@ -12,14 +12,17 @@
       <label
         id="nav-open"
         for="nav-input"
-      ><span /></label>
+      ><span @click="menu" /></label>
       <label
         id="nav-close"
         class="nav-unshown"
         for="nav-input"
       />
-      <div id="nav-content">
-        <Menu />
+      <div
+        id="nav-content"
+        :class="{'nav-unshown':isActive}"
+      >
+        <Menu @sample="closeMenu" />
       </div>
     </div>
   </div>
@@ -31,14 +34,25 @@ export default {
   name: "App",
   components: {
     Menu
+  },
+  data(){
+    return{
+      isActive:false
+    }
+  },
+  methods:{
+    closeMenu(){
+      this.isActive=true
+   },
+
+ menu(){
+     this.isActive=false
+    }
   }
 }
 </script>
 
-<style lang="scss">
-@import "~bootstrap/scss/bootstrap-reboot",
-  "~bootstrap/scss/buttons";
-</style>
+
 <style scope>
 #headerSection {
   background-color: #f3f3f3;
@@ -97,7 +111,6 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }

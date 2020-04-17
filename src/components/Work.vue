@@ -4,7 +4,7 @@
       <p>Works</p>
     </div>
     <div class="bbb">
-      <p>Seattleconsulting</p>
+      <p>(nothing)</p>
     </div>
   </div>
 </template>

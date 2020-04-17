@@ -4,15 +4,21 @@
       <p>Skill Set</p>
     </div>
     <div class="skillExplain">
-      <p>ascnionsaicnionspo nin ind ioan inspincpopcm oncaipdn ubv osncnopdnip nin ipsncpojscn ips</p>
+      <p>
+        身につけたスキルをまとめました。フロントエンドからバックエンドまで軽く触れてはいましたが、前者のスキルはポートフォリオの実装により力を付けつつあります。
+        バックエンドに関しての経験が不足している為、利用の仕方を勉強中です。
+        DevOpsは、実装時の変化の見える化が難しい為、触れているスキルの多さで評価しています。
+
+        Webアプリの開発、AI開発の為のスキルを付けられるよう勉学に励んでいます。
+      </p>
     </div>
-    <lavel id="gitHubLabel">
+    <label id="gitHubLabel">
       GitHub:
       <a
         id="gitHubLink"
         href="https://github.com/Naoya-Hayashi/portfolio"
       >https://github.com/Naoya-Hayashi/portfolio</a>
-    </lavel>
+    </label>
     <div id="skillCategorie">
       <ul>
         <li>
@@ -129,6 +135,7 @@ export default {
 <style scope>
   #skillSection {
     width: 100%;
+    height: auto;
     display: block;
     background: #fff;
   }
@@ -139,6 +146,8 @@ export default {
     font-weight: bold;
     font-size: 18px;
     text-shadow: 1px 1px #808080;
+    width: 300px;
+    margin: 0 auto;
   }
 
   .skillExplain {
@@ -147,6 +156,8 @@ export default {
     font-weight: bold;
     font-size: 12px;
     letter-spacing: 0.25em;
+    word-break: keep-all;
+    margin: 0 auto;
   }
 
   #gitHubLabel,
@@ -184,9 +195,7 @@ export default {
     list-style: none;
     margin: 10px;
     font-weight: bold;
-    background: #f3f3f3;
     display: inline-block;
-    box-shadow: 0 3px #f0f0f0;
   }
 
   #front-end {
