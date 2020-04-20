@@ -21,36 +21,37 @@
 <style scope>
 #mainSection {
   width: 100%;
-  height: 250px;
+  height: 420px;
   display: block;
   background: linear-gradient(to bottom, #80e1f7, #06c1e6);
+  padding-top: 40px;
 }
 
 .userName {
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   text-shadow: 2px 2px #808080;
   text-align: center;
   border-bottom: 1px solid white;
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .companyName {
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   text-shadow: 2px 2px #808080;
   padding: 20px;
 }
 
 .profilePicture {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 

@@ -26,7 +26,7 @@ export default {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector("#hoge"),
+        document.querySelector("#mainSection"),
         1000,
         'y'
       )
@@ -54,7 +54,7 @@ Vue.use(VueScrollTo, {
     color: #fff;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     text-shadow: 1px 1px #808080;
   }
 

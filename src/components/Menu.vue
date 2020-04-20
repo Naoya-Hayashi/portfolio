@@ -41,20 +41,6 @@
           @click="closeMenu"
         >Vision</a>
       </li>
-      <li id="menuItems">
-        <a
-          id="drawerMenuItemLink"
-          href="#workSection"
-          @click="closeMenu"
-        >Customize Item1</a>
-      </li>
-      <li id="menuItems">
-        <a
-          id="drawerMenuItemLink"
-          href="#costomizeSection"
-          @click="closeMenu"
-        >Customize Item2</a>
-      </li>
     </ul>
   </div>
 </template>
