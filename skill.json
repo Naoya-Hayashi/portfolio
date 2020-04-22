@@ -6,14 +6,69 @@
       "score": 3
     },
     {
+      "category": "front-end",
+      "name": "CSS",
+      "score": 3
+    },
+    {
+      "category": "front-end",
+      "name": "JavaScript",
+      "score": 3
+    },
+    {
+      "category": "front-end",
+      "name": "SCSS",
+      "score": 3
+    },
+    {
+      "category": "front-end",
+      "name": "Vue",
+      "score": 3
+    },
+    {
       "category": "back-end",
       "name": "Java",
       "score": 3
     },
     {
+      "category": "back-end",
+      "name": "Ruby",
+      "score": 3
+    },
+    {
+      "category": "back-end",
+      "name": "RubyOnRails",
+      "score": 3
+    },
+    {
+      "category": "back-end",
+      "name": "MySQL",
+      "score": 3
+    },
+    {
       "category": "devops",
-      "name": "github",
-      "score": 2
+      "name": "Linux",
+      "score": 3
+    },
+    {
+      "category": "devops",
+      "name": "Node",
+      "score": 3
+    },
+    {
+      "category": "devops",
+      "name": "Git",
+      "score": 3
+    },
+    {
+      "category": "devops",
+      "name": "GitHub",
+      "score": 3
+    },
+    {
+      "category": "devops",
+      "name": "Firebase",
+      "score": 3
     }
   ]
 }

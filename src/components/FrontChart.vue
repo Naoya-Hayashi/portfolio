@@ -1,13 +1,20 @@
 <script>
 import { Radar } from 'vue-chartjs';
-
+//20200421
+import store from '/Users/nao8/seattle-academy20/portfolio/src/store.js'
+import Skill from '../../skill.json'
+//0421
 export default {
     name:'Chart',
   extends: Radar,
+  //20200421の変更点
+  store,
+  Skill,
+  //この間0421
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        lavels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
         datasets: [
           {
             label: 'Front-end Skill Level',
