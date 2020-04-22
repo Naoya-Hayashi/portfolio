@@ -12,43 +12,108 @@ export default new Vuex.Store({
   //state:コンポーネントでいうdata
   state: {
     skillCategories: [],
+    loaded: false
   },
-
-
 
   //getters:コンポーネントでいうcomputed的なもの
   getters: {
-      getSkills: (state) => (category) => {
-        if (state.skillcategories.length > 0) {
-          return state.skillcategories.find((skill) => skill.category===category);
-        }
-      return [];
-    },
+ //     getSkills: (state) => (category) => {
+ //       if (state.skillCategories.length > 0) {
+ //         return state.skillCategories.find((skills) => skills.Categories==category);
+ //       }
+ //     return [];
+ //   },
+ // },
+ frontName: (state) => {
+  const skillNameArray = []
+     state.skillCategories[0].skill.forEach((Skill) => {
+      skillNameArray.push(Skill.name)
+    })
+  return skillNameArray
   },
 
+  frontScore: (state) =>{
+    const skillScoreArray = []
+      state.skillCategories[0].skill.forEach((Score) => {
+        skillScoreArray.push(Score.score)
+      })
+    return skillScoreArray
+  },
 
+  frontColor: (state) =>  {
+    const skillColorArray = []
+      state.skillCategories[0].skill.forEach((Color) => {
+        skillColorArray.push(Color.backgroundColor)
+      })
+    return skillColorArray
+  },
+  backName: (state) => {
+    const skillNameArray = []
+       state.skillCategories[1].skill.forEach((Skill) => {
+        skillNameArray.push(Skill.name)
+      })
+    return skillNameArray
+    },
 
+    backScore: (state) =>{
+      const skillScoreArray = []
+        state.skillCategories[1].skill.forEach((Score) => {
+          skillScoreArray.push(Score.score)
+        })
+      return skillScoreArray
+    },
+
+    backColor: (state) =>  {
+      const skillColorArray = []
+        state.skillCategories[1].skill.forEach((Color) => {
+          skillColorArray.push(Color.backgroundColor)
+        })
+      return skillColorArray
+    },
+    devName: (state) => {
+      const skillNameArray = []
+         state.skillCategories[2].skill.forEach((Skill) => {
+          skillNameArray.push(Skill.name)
+        })
+      return skillNameArray
+      },
+
+      devScore: (state) =>{
+        const skillScoreArray = []
+          state.skillCategories[2].skill.forEach((Score) => {
+            skillScoreArray.push(Score.score)
+          })
+        return skillScoreArray
+      },
+
+      devColor: (state) =>  {
+        const skillColorArray = []
+          state.skillCategories[2].skill.forEach((Color) => {
+            skillColorArray.push(Color.backgroundColor)
+          })
+        return skillColorArray
+      }
+      },
   //mutations:コンポーネントでいうmethod（と言うかsetter）
   //stateを唯一変更できるもの
   mutations: {
     //vuexでは引数をpayloadと呼ぶっぽい
     //payloadはオブジェクトにするべき（いっぱい入れれるし）
-    setSkillCategories(state, payload) {
+    setskillCategories(state,payload){
+      //skillsArray
       state.skillCategories = payload.skillCategories;
-    },
+      state.loaded =true
+    }
   },
-
-
-
   //actionのコミットを使うことでミューテーションを呼び出す（コンポーネントには無い概念）
   actions: {
-    async updateSkillcategories({commit}) {
+    async updateskillCategories({commit}) {
       const skillCategories = [];
       const res = await axios.get('https://us-central1-myfirstfirebase-8807b.cloudfunctions.net/skills');
-      res.date.forEach((category) =>{
+      res.data.forEach((category) =>{
         skillCategories.push(category);
       });
-      commit('setSkillCategories', {skillCategories});
+      commit('setskillCategories', {skillCategories});
     },
   },
 });

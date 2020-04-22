@@ -1,26 +1,19 @@
 <script>
 import { Radar } from 'vue-chartjs';
-//20200421
-import store from '/Users/nao8/seattle-academy20/portfolio/src/store.js'
-import Skill from '../../skill.json'
-//0421
+
 export default {
-    name:'Chart',
+    name:'FrontChart',
   extends: Radar,
-  //20200421の変更点
-  store,
-  Skill,
-  //この間0421
   data () {
     return {
       data: {
-        lavels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Front-end Skill Level',
-            data: [4, 4, 2, 2, 4],
+            data: [],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
+              "rgba(255, 99, 132, 0.2)"
             ],
             borderColor: [
               'rgba(255, 99, 132, 1)',
@@ -42,14 +35,48 @@ export default {
             min:0,
             stepSize:1
           }
+        },
+        legend:{
+          display:false
         }
       }
     }
   },
   mounted () {
+    this.getChartName();
+    this.getChartScore();
+    this.getChartColor();
     this.renderChart(this.data, this.options)
+  //  this.getSkills()
+  },
+  methods:{
+    getChartName(){
+      const names = this.$store.getters.frontName
+      this.data.labels= names
+    },
+    getChartScore(){
+      const scores = this.$store.getters.frontScore
+      this.data.datasets[0].data = scores
+    },
+     getChartColor(){
+      const colors = this.$store.getters.frontColor
+      this.data.datasets[0].backgroundColor = colors
+    }
   }
+ //methods:{
+ //// storeからscore
+ //getFSkillScores(){
+ //const skillFScore=this.$store.getters.frontScore
+ //this.data.datasets[0].data=skillFScore
+ //},
+ //// storeからname
+ //getFSkillName(){
+ //const skillFName=this.$store.getters.frontName
+ //this.data.labels=skillFName
+ //}
+ //}
 }
+
 </script>
 
 

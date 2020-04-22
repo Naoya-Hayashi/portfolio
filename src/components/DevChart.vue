@@ -2,7 +2,7 @@
 import { Radar } from 'vue-chartjs';
 
 export default {
-    name:'Chart',
+    name:'DevChart',
   extends: Radar,
   data () {
     return {
@@ -39,8 +39,25 @@ export default {
       }
     }
   },
-  mounted () {
+   mounted () {
+    this.getChartName3();
+    this.getChartScore3();
+    this.getChartColor3();
     this.renderChart(this.data, this.options)
-  }
-}
+  },
+    methods:{
+    getChartName3(){
+      const names = this.$store.getters.devName
+      this.data.labels= names
+    },
+    getChartScore3(){
+      const scores = this.$store.getters.devScore
+      this.data.datasets[0].data = scores
+    },
+     getChartColor3(){
+      const colors = this.$store.getters.devColor
+      this.data.datasets[0].backgroundColor = colors
+     }
+     }
+     }
 </script>
