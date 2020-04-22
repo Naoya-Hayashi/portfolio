@@ -2,7 +2,6 @@
   <div id="app">
     <Header />
     <Main />
-    <div>{{ this.skills }}</div>
     <About />
     <Skill />
     <Vision />
@@ -19,6 +18,7 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
+import { mapActions } from 'vuex';
 //import Work from './components/Work.vue'
 //import Customize from './components/Customize.vue'
 
@@ -34,33 +34,17 @@ export default {
 //    Work,
 //    Customize
   },
-  data() {
-    return {
-      skills: []
-    }
+  computed: {
+    skillCategories(){
+     return this.$store.getters.skillCategories
+   }
   },
   mounted () {
-    this.getSkills();
+    this.updateskillCategories();
+    this.$store.dispatch('updateskillCategories');
   },
   methods: {
-    getSkills() {
-      // dataのスキルを初期化する
-      this.skills = [];
-      // this.skillsを一時変数のitemsに参照コピーする
-      let items = this.skills;
-      // axios.getを用いてデプロイ済のfunctionにアクセスする
-      this.axios.get('https://us-central1-myfirstfirebase-8807b.cloudfunctions.net/skills')
-        .then((response) => {
-          response.data.forEach(function(skill) {
-            // 取得したデータを１件ずつ配列に設定する
-            items.push(skill);
-          })
-        })
-        .catch((e) => {
-          alert(e);
-        });
-
-    }
+      ...mapActions(['updateskillCategories']),
   }
 }
 

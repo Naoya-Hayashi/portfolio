@@ -1,74 +1,94 @@
 {
-  "skills": [
+  "skills" : [
     {
-      "category": "front-end",
+      "category": "frontend",
+      "skill" : [{
       "name": "HTML",
-      "score": 3
-    },
+      "score": 4,
+      "backgroundColor":"rgba(255, 99, 132, 0.2)"
+       },
     {
-      "category": "front-end",
+      "category": "frontend",
       "name": "CSS",
-      "score": 3
+      "score": 3,
+      "backgroundColor":"rgba(255, 99, 132, 0.2)"
     },
     {
-      "category": "front-end",
+      "category": "frontend",
       "name": "JavaScript",
-      "score": 3
+      "score": 2,
+      "backgroundColor":"rgba(255, 99, 132, 0.2)"
     },
     {
-      "category": "front-end",
+      "category": "frontend",
       "name": "SCSS",
-      "score": 3
+      "score": 1,
+      "backgroundColor":"rgba(255, 99, 132, 0.2)"
     },
     {
-      "category": "front-end",
+      "category": "frontend",
       "name": "Vue",
-      "score": 3
+      "score": 3,
+      "backgroundColor":"rgba(255, 99, 132, 0.2)"
+    }]
     },
     {
-      "category": "back-end",
+      "category": "backend",
+      "skill" : [{
       "name": "Java",
-      "score": 3
+      "score": 2,
+      "backgroundColor":"rgba(148, 248, 150, 0.2)"
     },
     {
-      "category": "back-end",
+      "category": "backend",
       "name": "Ruby",
-      "score": 3
+      "score": 1,
+      "backgroundColor":"rgba(148, 248, 150, 0.2)"
     },
     {
-      "category": "back-end",
+      "category": "backend",
       "name": "RubyOnRails",
-      "score": 3
+      "score": 1,
+      "backgroundColor":"rgba(148, 248, 150, 0.2)"
     },
     {
-      "category": "back-end",
+      "category": "backend",
       "name": "MySQL",
-      "score": 3
+      "score": 1,
+      "backgroundColor":"rgba(148, 248, 150, 0.2)"
+    }]
     },
     {
       "category": "devops",
-      "name": "Linux",
-      "score": 3
+      "skill" : [{
+      "name" : "Linux",
+      "score": 4,
+      "backgroundColor":"rgba(188, 129, 243, 0.2)"
     },
     {
       "category": "devops",
       "name": "Node",
-      "score": 3
+      "score": 2,
+      "backgroundColor":"rgba(188, 129, 243, 0.2)"
     },
     {
       "category": "devops",
       "name": "Git",
-      "score": 3
+      "score": 3,
+      "backgroundColor":"rgba(188, 129, 243, 0.2)"
     },
     {
       "category": "devops",
       "name": "GitHub",
-      "score": 3
+      "score": 3,
+      "backgroundColor":"rgba(188, 129, 243, 0.2)"
     },
     {
       "category": "devops",
       "name": "Firebase",
-      "score": 3
+      "score": 2,
+      "backgroundColor":"rgba(188, 129, 243, 0.2)"
+    }]
     }
   ]
 }
