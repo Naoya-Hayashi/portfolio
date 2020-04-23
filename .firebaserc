@@ -1,5 +1,23 @@
 {
-  "projects": {
-    "default": "myfirstfirebase-8807b"
+   "projects": {
+     "default": "myfirstfirebase-8807b"
+{
+  "targets": {
+    "myfirstfirebase-8807b": {
+      "hosting": {
+        "portfolio": [
+          "myfirstfirebase-8807b"
+        ]
+      }
+    },
+    "develop-protfolio2020121": {
+      "hosting": {
+        "portfolio": [
+          "develop-protfolio2020121"
+        ]
+          }
+        }
+      }
+    }
   }
 }
