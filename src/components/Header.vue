@@ -1,8 +1,5 @@
 <template>
   <div id="headerSection">
-    <div
-      id="hoge"
-    />
     <div id="headerButton">
       <input
         id="nav-input"
@@ -59,6 +56,7 @@ export default {
   width: 100%;
   height: 40px;
   display: block;
+  position: fixed;
 }
 
 #headerButton {

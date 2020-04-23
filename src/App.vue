@@ -5,8 +5,8 @@
     <About />
     <Skill />
     <Vision />
-    <Work />
-    <Customize />
+    <!--   <Work />
+    <Customize /> -->
     <Footer />
   </div>
 </template>
@@ -18,11 +18,9 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
-import Work from './components/Work.vue'
-import Customize from './components/Customize.vue'
-
-
-
+import { mapActions } from 'vuex';
+//import Work from './components/Work.vue'
+//import Customize from './components/Customize.vue'
 
 export default {
   name: 'App',
@@ -33,11 +31,26 @@ export default {
     Skill,
     Vision,
     Footer,
-    Work,
-    Customize
-
+//    Work,
+//    Customize
+  },
+  computed: {
+    skillCategories(){
+     return this.$store.getters.skillCategories
+   }
+  },
+  mounted () {
+    this.updateskillCategories();
+    this.$store.dispatch('updateskillCategories');
+  },
+  methods: {
+      ...mapActions(['updateskillCategories']),
   }
 }
+
+
+
+
 </script>
 
 <style>
