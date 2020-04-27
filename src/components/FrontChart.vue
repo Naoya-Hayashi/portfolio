@@ -7,11 +7,11 @@ export default {
   data () {
     return {
       data: {
-        labels: [],
+         labels: ['HTML', 'CSS', 'JavaScript', 'SCSS', 'Vue' ],
         datasets: [
           {
             label: 'Front-end Skill Level',
-            data: [],
+            data: [3, 3, 3, 3, 3],
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)"
             ],
