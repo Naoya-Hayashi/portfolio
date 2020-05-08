@@ -42,7 +42,7 @@ export default {
    mounted () {
     this.getChartName3();
     this.getChartScore3();
-    this.getChartColor3();
+//    this.getChartColor3();
     this.renderChart(this.data, this.options)
   },
     methods:{
@@ -54,10 +54,10 @@ export default {
       const scores = this.$store.getters.devScore
       this.data.datasets[0].data = scores
     },
-     getChartColor3(){
-      const colors = this.$store.getters.devColor
-      this.data.datasets[0].backgroundColor = colors
-     }
+    //  getChartColor3(){
+    //   const colors = this.$store.getters.devColor
+    //   this.data.datasets[0].backgroundColor = colors
+    //  }
      }
      }
 </script>

@@ -26,7 +26,7 @@ export default new Vuex.Store({
  // },
  frontName: (state) => {
   const skillNameArray = []
-     state.skillCategories[0].skill.forEach((Skill) => {
+     state.skillCategories[2].skill.forEach((Skill) => {
       skillNameArray.push(Skill.name)
     })
   return skillNameArray
@@ -34,19 +34,19 @@ export default new Vuex.Store({
 
   frontScore: (state) =>{
     const skillScoreArray = []
-      state.skillCategories[0].skill.forEach((Score) => {
+      state.skillCategories[2].skill.forEach((Score) => {
         skillScoreArray.push(Score.score)
       })
     return skillScoreArray
   },
 
-  frontColor: (state) =>  {
-    const skillColorArray = []
-      state.skillCategories[0].skill.forEach((Color) => {
-        skillColorArray.push(Color.backgroundColor)
-      })
-    return skillColorArray
-  },
+  // frontColor: (state) =>  {
+  //   const skillColorArray = []
+  //     state.skillCategories[2].skill.forEach((Color) => {
+  //       skillColorArray.push(Color.backgroundColor)
+  //     })
+  //   return skillColorArray
+  // },
   backName: (state) => {
     const skillNameArray = []
        state.skillCategories[1].skill.forEach((Skill) => {
@@ -63,16 +63,16 @@ export default new Vuex.Store({
       return skillScoreArray
     },
 
-    backColor: (state) =>  {
-      const skillColorArray = []
-        state.skillCategories[1].skill.forEach((Color) => {
-          skillColorArray.push(Color.backgroundColor)
-        })
-      return skillColorArray
-    },
+    // backColor: (state) =>  {
+    //   const skillColorArray = []
+    //     state.skillCategories[1].skill.forEach((Color) => {
+    //       skillColorArray.push(Color.backgroundColor)
+    //     })
+    //   return skillColorArray
+    // },
     devName: (state) => {
       const skillNameArray = []
-         state.skillCategories[2].skill.forEach((Skill) => {
+         state.skillCategories[0].skill.forEach((Skill) => {
           skillNameArray.push(Skill.name)
         })
       return skillNameArray
@@ -80,19 +80,18 @@ export default new Vuex.Store({
 
       devScore: (state) =>{
         const skillScoreArray = []
-          state.skillCategories[2].skill.forEach((Score) => {
+          state.skillCategories[0].skill.forEach((Score) => {
             skillScoreArray.push(Score.score)
           })
         return skillScoreArray
       },
-
-      devColor: (state) =>  {
-        const skillColorArray = []
-          state.skillCategories[2].skill.forEach((Color) => {
-            skillColorArray.push(Color.backgroundColor)
-          })
-        return skillColorArray
-      }
+      // devColor: (state) =>  {
+      //   const skillColorArray = []
+      //     state.skillCategories[0].skill.forEach((Color) => {
+      //       skillColorArray.push(Color.backgroundColor)
+      //     })
+      //   return skillColorArray
+      // }
       },
   //mutations:コンポーネントでいうmethod（と言うかsetter）
   //stateを唯一変更できるもの

@@ -45,7 +45,7 @@ export default {
   mounted () {
     this.getChartName();
     this.getChartScore();
-    this.getChartColor();
+  //  this.getChartColor();
     this.renderChart(this.data, this.options)
   //  this.getSkills()
   },
@@ -58,10 +58,10 @@ export default {
       const scores = this.$store.getters.frontScore
       this.data.datasets[0].data = scores
     },
-     getChartColor(){
-      const colors = this.$store.getters.frontColor
-      this.data.datasets[0].backgroundColor = colors
-    }
+    //  getChartColor(){
+    //   const colors = this.$store.getters.frontColor
+    //   this.data.datasets[0].backgroundColor = colors
+   // }
   }
  //methods:{
  //// storeからscore
